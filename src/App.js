@@ -8,7 +8,7 @@ import NavBar from './components/NavBar';
 import './App.css';
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'https://frozen-fortress-30519.herokuapp.com/',
 });
 
 const authLink = setContext((_, { headers }) => {
