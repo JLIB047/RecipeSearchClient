@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {setContext} from '@apollo/client/link/context';
 import SearchRecipe from './pages/SearchRecipe';
 import SavedRecipe from './pages/SavedRecipe';
-import NavBar from './components/NavBar';
+import AppNavbar from './components/NavBar';
 import './App.css';
 
 const httpLink = createHttpLink({
@@ -34,7 +34,7 @@ function App() {
     <ApolloProvider client={client}>
     <Router>
       <>
-        <NavBar />
+        <AppNavbar />
         <Switch>
           <Route exact path='/' component={SearchRecipe} />
           <Route exact path='/saved' component={SavedRecipe} />
